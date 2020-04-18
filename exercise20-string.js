@@ -1,5 +1,5 @@
 /*
-Slide AdvancedJS Part2 page 60
+Slide AdvancedJS Part2 page 61
 2.11.  แบบฝึกหัด
 4.เขียนฟังก์ชันที่ extractCurrencyValue(string, rate) โดยที่ฟังก์ชันดังกล่าว
 จะแปลง string ที่เป็นค่าเงิน dollar ให้เป็น number ที่มีค่าเป็นเงินบาทไทย
