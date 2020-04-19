@@ -120,8 +120,17 @@ let result11 = [
       { name: "banana", birth: "1990-10-01" },
       { name: "watermelon", birth: "1985-12-01" }
 ].map((value) => {
-      value.age = 19;
+      let minutes = 1000 * 60;
+      let hours = minutes * 60;
+      let days = hours * 24;
+      let years = days * 365;
+      let birthday = new Date(value.birth).getTime();
+      let dateNow = new Date().getTime();
+      let differenceDate = dateNow - birthday;
+      let convertYear = differenceDate / years;
+      value.age = Math.floor(convertYear);
       return value;
+     
 });
 console.log(result11);
 
