@@ -134,3 +134,49 @@ let result11 = [
 });
 console.log(result11);
 
+/*
+1.12 array1 = [
+       { name: "apple", birth: "2000-01-01" },
+       { name: "banana", birth: "1990-10-10" },
+       { name: "watermelon", birth: "1985-12-30" },
+     ]
+     array2 [
+         "<tr>
+           <td>apple</td> 
+           <td>01 jan 2000</td>
+          </tr>",
+         "<tr> <td>banana</td> <td>10 oct 1990</td> </tr>",
+         "<tr> <td>watermelon</td> <td>30 dec 1985</td> </tr>",
+     ]
+
+*/
+let result12 = [
+      { name: "apple", birth: "2000-01-01" },
+      { name: "banana", birth: "1990-10-10" },
+      { name: "watermelon", birth: "1985-12-30" }
+].map((value) => {      
+      let birthday = new Date(value.birth);
+      let months = new Array();
+      months[0] = "jan";
+      months[0] = "jan";
+      months[0] = "jan";
+      months[1] = "feb";
+      months[2] = "mar";
+      months[3] = "apr";
+      months[4] = "may";
+      months[5] = "jun";
+      months[6] = "jul";
+      months[7] = "aug";
+      months[8] = "sep";
+      months[9] = "oct";
+      months[10] = "nov";
+      months[11] = "dec";
+
+      let stringMonth = months[birthday.getMonth()];
+      let day = birthday.getDate();
+      if (day < 10) day = `0${day}`;
+      let year = birthday.getFullYear();
+
+      return `<tr> <td>${value.name}</td> <td>${day} ${stringMonth} ${year}</td> </tr>`
+});
+console.log(result12);
